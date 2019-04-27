@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>New user - Panel Admin</title>
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.material.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.material.mobile.min.css" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://kendo.cdn.telerik.com/2019.1.220/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2019.1.220/js/kendo.all.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body class="container customfont">
+    <header>
+        <div id="myTopnav" class="row header topnav">
+            <div class="topnavMobile row">
+                <a class="nav-link dropdown-toggle col" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                    Menu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="usuarios.html">Users</a>
+                  <a class="dropdown-item" href="createUser.html">New user</a>
+                  <a class="dropdown-item" href="deleteUser.html">Disable user</a>
+                  <a class="dropdown-item" href="login.html">Logout</a>
+                </div>
+                <div class="topnavMobile col">
+                    <a href="index.html">
+                        <figure>
+                            <img src="images/icons/svgs/solid/home.svg" alt="home" style="width: 100%; margin-left: 200%;">
+                        </figure>
+                    </a>
+                </div>
+            </div>
+            <div class="col desktop">
+                <a href="index.html">
+                    <figure>
+                        <img src="images/icons/svgs/solid/home.svg" alt="home">
+                    </figure>
+                    <p>Home</p>
+                </a>
+            </div>
+            <div class="col desktop">
+                <a href="usuarios.html">
+                    <figure>
+                        <img src="images/icons/svgs/solid/users.svg" alt="users">
+                    </figure>
+                    <p>Users</p>
+                </a>
+            </div>
+
+            <div class="col desktop">
+                <a href="createUser.html">
+                    <figure>
+                        <img src="images/icons/svgs/solid/user-plus.svg" alt="create user">
+                    </figure>
+                    <p>New user</p>
+                </a>
+            </div>
+            <div class="col desktop">
+                <a href="deleteUser.html">
+                    <figure>
+                        <img src="images/icons/svgs/solid/user-times.svg" alt="delete user">
+                    </figure>
+                    <p>Disable user</p>
+                </a>
+            </div>
+            <div class="col desktop">
+                <a href="login.html">
+                    <figure>
+                        <img src="images/icons/svgs/solid/sign-out-alt.svg" alt="logout">
+                    </figure>
+                    <p>Logout</p>
+                </a>
+            </div>
+        </div>  
+    </header>
+
+    <div class="line-separator"></div>
+
+    <div class="description-page">
+        <img src="images/icons/svgs/regular/check-square.svg">
+        <span>New user</span>
+    </div>
+
+    <form style="margin-left: 25%; margin-right: 25%;">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Id</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter id">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Name</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Name">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Type</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Type">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Birthdate</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Birthdate">
+      </div>
+
+      <label for="exampleInputPassword1">Status</label>
+      <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Active
+              </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Inactive</a>
+            </div>
+            </div>
+      
+      <button style="margin-top: 10%; margin-left: 35%; margin-bottom: 10%" type="submit" class="btn btn-primary">Create user</button>
+          
+      </div>
+     
+    </form>
+
+</body>
+
+</html>

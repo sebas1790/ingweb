@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Resumen - Panel Admin</title>
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.material.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.material.mobile.min.css" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://kendo.cdn.telerik.com/2019.1.220/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2019.1.220/js/kendo.all.min.js"></script>
+
+</head>
+
+<body class="container customfont">
+
+    <header>
+        <div id="myTopnav" class="row header topnav">
+            <div class="topnavMobile row">
+                <a class="nav-link dropdown-toggle col" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                    Menu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="usuarios.html">Users</a>
+                  <a class="dropdown-item" href="createUser.html">New user</a>
+                  <a class="dropdown-item" href="deleteUser.html">Disable user</a>
+                  <a class="dropdown-item" href="login.html">Logout</a>
+                </div>
+                <div class="topnavMobile col">
+                    <a href="index.html">
+                        <figure>
+                            <img src="images/icons/svgs/solid/home.svg" alt="home" style="width: 100%; margin-left: 200%;">
+                        </figure>
+                    </a>
+                </div>
+            </div>
+            <div class="col desktop">
+                <a href="index.html">
+                    <figure>
+                        <img src="images/icons/svgs/solid/home.svg" alt="home">
+                    </figure>
+                    <p>Home</p>
+                </a>
+            </div>
+            <div class="col desktop">
+                <a href="usuarios.html">
+                    <figure>
+                        <img src="images/icons/svgs/solid/users.svg" alt="users">
+                    </figure>
+                    <p>Users</p>
+                </a>
+            </div>
+
+            <div class="col desktop">
+                <a href="createUser.html">
+                    <figure>
+                        <img src="images/icons/svgs/solid/user-plus.svg" alt="create user">
+                    </figure>
+                    <p>New user</p>
+                </a>
+            </div>
+            <div class="col desktop">
+                <a href="deleteUser.html">
+                    <figure>
+                        <img src="images/icons/svgs/solid/user-times.svg" alt="delete user">
+                    </figure>
+                    <p>Disable user</p>
+                </a>
+            </div>
+            <div class="col desktop">
+                <a href="login.html">
+                    <figure>
+                        <img src="images/icons/svgs/solid/sign-out-alt.svg" alt="logout">
+                    </figure>
+                    <p>Logout</p>
+                </a>
+            </div>
+        </div>  
+    </header>
+
+    <div class="line-separator"></div>
+
+    <div class="description-page">
+        <img src="images/icons/svgs/regular/check-square.svg">
+        <span>Summary tasks</span>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div id="kpi" style="margin-left: 5%; margin-right: 5%;">
+                <div class="chart-wrapper">
+                    <div id="chart" style="width:100%"></div>
+                </div>
+            </div>
+        </div>
+        <div class="summary-desktop col">
+            <div id="example">
+                <div class="demo-section k-content wide">
+                    <table style="width:100%">
+                        <tr>
+                            <td">
+                                <div></div>
+                            </td>
+
+                            <td ">
+                                <div id="chart"></div>
+                            </td>   
+                            
+                            <td style="width:10%">
+                                <div></div>
+                            </td>
+
+                            <td >
+                                <div style="overflow-x:auto; overflow-y:hidden;">
+                                    <div>
+                                        <h4 style="color:#8e8e8e; text-align: center; font-size:16px">KPI</h4>
+                                        <!-- ngRepeat: item in ctrl.summaryList --><div class="list-group-item ">
+                                            <div style="font-weight:bold;">Month tasks:</div>
+                                            <div style="text-align: right;" >145</div>  
+                                        </div><!-- end ngRepeat: item in ctrl.summaryList --><div class="list-group-item ">
+                                            <div style="font-weight:bold;">Time average canceled:</div>
+                                            <div style="text-align: right;" >10d 24h</div>  
+                                        </div><!-- end ngRepeat: item in ctrl.summaryList --><div class="list-group-item ">
+                                            <div style="font-weight:bold;">Time average pending:</div>
+                                            <div style="text-align: right;" >12d 4h</div>   
+                                        </div><!-- end ngRepeat: item in ctrl.summaryList --><div class="list-group-item ">
+                                            <div style="font-weight:bold;">Time average approved:</div>
+                                            <div style="text-align: right;" >8d 4h</div>
+                                        </div><!-- end ngRepeat: item in ctrl.summaryList --><div class="list-group-item ">
+                                            <div style="font-weight:bold;">Time average created:</div>
+                                            <div style="text-align: right;" >11d 4h</div>
+                                        </div>
+                                </div>
+                            </td>  
+
+                            <td style="width:5%">
+                                <div></div>
+                            </td>
+                        </tr>    
+                    </table>                                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="summary-mobile">
+            <div id="example">
+                <div class="demo-section k-content wide">
+                    <table style="width:100%">
+                        <tr>
+                            <td">
+                                <div></div>
+                            </td>
+
+                            <td ">
+                                <div id="chart"></div>
+                            </td>   
+                            
+                            <td style="width:10%">
+                                <div></div>
+                            </td>
+
+                            <td >
+                                <div style="overflow-x:auto; overflow-y:hidden;">
+                                    <div>
+                                        <h4 style="color:#8e8e8e; text-align: center; font-size:16px">KPI</h4>
+                                        <!-- ngRepeat: item in ctrl.summaryList --><div class="list-group-item ">
+                                            <div style="font-weight:bold;">Month tasks:</div>
+                                            <div style="text-align: right;" >145</div>  
+                                        </div><!-- end ngRepeat: item in ctrl.summaryList --><div class="list-group-item ">
+                                            <div style="font-weight:bold;">Time average canceled:</div>
+                                            <div style="text-align: right;" >10d 24h</div>  
+                                        </div><!-- end ngRepeat: item in ctrl.summaryList --><div class="list-group-item ">
+                                            <div style="font-weight:bold;">Time average pending:</div>
+                                            <div style="text-align: right;" >12d 4h</div>   
+                                        </div><!-- end ngRepeat: item in ctrl.summaryList --><div class="list-group-item ">
+                                            <div style="font-weight:bold;">Time average approved:</div>
+                                            <div style="text-align: right;" >8d 4h</div>
+                                        </div><!-- end ngRepeat: item in ctrl.summaryList --><div class="list-group-item ">
+                                            <div style="font-weight:bold;">Time average created:</div>
+                                            <div style="text-align: right;" >11d 4h</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>  
+
+                            <td style="width:5%">
+                                <div></div>
+                            </td>
+                        </tr>    
+                    </table>                                </div>
+            </div>
+        </div>
+
+    <script>
+        function createChart() {
+            $("#chart").kendoChart({
+                title: {
+                    text: "RESUMEN DE TAREAS DE MANTENIMIENTO"
+                },
+                legend: {
+                    position: "bottom"
+                },
+                seriesDefaults: {
+                    type: "column"
+                },
+                series: [{
+                    name: "Tareas",
+                    data: [45, 30, 25, 70]
+                }],
+                valueAxis: {
+                    labels: {
+                        format: "{0} T"
+                    },
+                    line: {
+                        visible: false
+                    },
+                    axisCrossingValue: 0
+                },
+                categoryAxis: {
+                    categories: ['Tareas Pendientes', 'Tareas Aprobadas', 'Tareas Canceladas', 'Tareas Creadas'],
+                    line: {
+                        visible: false
+                    }
+                },
+                tooltip: {
+                    visible: true,
+                    format: "{0}%",
+                    template: "#= series.name #: #= value #"
+                }
+            });
+        }
+
+        $(document).ready(createChart);
+        $(document).bind("kendo:skinChange", createChart);
+    </script>
+    
+    <script>
+        function createChart() {
+            $("#chart").kendoChart({
+                title: {
+                    text: "Summary tasks"
+                },
+                legend: {
+                    position: "bottom"
+                },
+                seriesColors: ["#1D71FF"],
+                seriesDefaults: {
+                    type: "column"
+                },
+                series: [{
+                    name: "Tasks",
+                    data: [45, 30, 25, 70]
+                }/*, {
+                name: "Russian Federation",
+                data: [null, 7.295, 7.175, 6.376]
+            }, {
+                name: "Germany",
+                data: [null, 0.375, 1.161, 0.684]
+            },{
+                name: "World",
+                data: [null, 2.733, 3.994, 3.464]
+            }*/],
+                valueAxis: {
+                    labels: {
+                        format: "{0}"
+                    },
+                    line: {
+                        visible: false
+                    },
+                    axisCrossingValue: 0
+                },
+                categoryAxis: {
+                    categories: ['Pending task', 'Approved task', 'Calceled task', 'Created task'],
+                    line: {
+                        visible: false
+                    }
+                },
+                tooltip: {
+                    visible: true,
+                    format: "{0}%",
+                    template: "#= series.name #: #= value #"
+                }
+            });
+        }
+
+        $(document).ready(createChart);
+        $(document).bind("kendo:skinChange", createChart);
+
+                $(window).on("resize", function() {
+          kendo.resize($(".chart-wrapper"));
+        });
+    </script>
+    </div>
+</body>
+
+</html>
