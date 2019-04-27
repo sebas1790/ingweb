@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Inhabilitar Usuarios - Panel Admin</title>
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.material.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2019.1.220/styles/kendo.material.mobile.min.css" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://kendo.cdn.telerik.com/2019.1.220/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2019.1.220/js/kendo.all.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body class="container customfont">
+    <header>
+        <div id="myTopnav" class="row header topnav">
+            <div class="topnavMobile row">
+                <a class="nav-link dropdown-toggle col" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                    Menu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="usuarios.html">Users</a>
+                  <a class="dropdown-item" href="createUser.html">New user</a>
+                  <a class="dropdown-item" href="deleteUser.html">Disable user</a>
+                  <a class="dropdown-item" href="login.html">Logout</a>
+                </div>
+                <div class="topnavMobile col">
+                    <a href="index.html">
+                        <figure>
+                            <img src="images/icons/svgs/solid/home.svg" alt="home" style="width: 100%; margin-left: 200%;">
+                        </figure>
+                    </a>
+                </div>
+            </div>
+            <div class="col desktop">
+                <a href="index.html">
+                    <figure>
+                        <img src="images/icons/svgs/solid/home.svg" alt="home">
+                    </figure>
+                    <p>Home</p>
+                </a>
+            </div>
+            <div class="col desktop">
+                <a href="usuarios.html">
+                    <figure>
+                        <img src="images/icons/svgs/solid/users.svg" alt="users">
+                    </figure>
+                    <p>Users</p>
+                </a>
+            </div>
+
+            <div class="col desktop">
+                <a href="createUser.html">
+                    <figure>
+                        <img src="images/icons/svgs/solid/user-plus.svg" alt="create user">
+                    </figure>
+                    <p>New user</p>
+                </a>
+            </div>
+            <div class="col desktop">
+                <a href="deleteUser.html">
+                    <figure>
+                        <img src="images/icons/svgs/solid/user-times.svg" alt="delete user">
+                    </figure>
+                    <p>Disable user</p>
+                </a>
+            </div>
+            <div class="col desktop">
+                <a href="login.html">
+                    <figure>
+                        <img src="images/icons/svgs/solid/sign-out-alt.svg" alt="logout">
+                    </figure>
+                    <p>Logout</p>
+                </a>
+            </div>
+        </div>  
+    </header>
+
+    <div class="line-separator"></div>
+
+    <div class="description-page">
+        <img src="images/icons/svgs/regular/check-square.svg">
+        <span>Disable user</span>
+    </div>
+    <div class="form-mobile">
+
+        <div class="text-type-1">
+        <p>Id User</p>
+    </div>
+
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <div class="row">
+                <div class="col-6">
+                    <input type="text" name="date">
+                </div>
+                <div class="col-6">
+                    <figure id="figureDelete">
+                        <img src="images/icons/svgs/solid/search.svg">
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 "></div>
+    </div>
+
+    <div class="line-separator"></div>
+    
+        <form style="margin-left: 25%; margin-right: 25%;">
+          <div class="form-group">
+            <label for="exampleInputEmail1">IdUser</label>
+            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter id">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Name</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter name">
+          </div>
+          <div class="row">
+              <div class="col-4"></div>
+              <div class="col-4">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Inactive
+                  </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Active</a>
+                </div>
+                </div>
+          <button style="margin-top: 20%; margin-left: 25%; margin-bottom: 10%" type="submit" class="btn btn-primary">Update</button>
+              </div>
+              <div class="col-4"></div>
+          </div>
+        </form>
+        
+    </div>
+
+    <div id="example">
+        <div id="grid"></div>
+        <script>
+            $(document).ready(function () {
+                $("#grid").kendoGrid({
+                    dataSource: {
+                        type: "odata",
+                        transport: {
+                            read: "https://demos.telerik.com/kendo-ui/service/Northwind.svc/Customers"
+                        },
+                        pageSize: 10
+                    },
+                    //height: 550,
+                    groupable: false,
+                    sortable: false,
+                    pageable: {
+                        refresh: true,
+                        pageSizes: false,
+                        buttonCount: 5
+                    },
+                    columns: [{
+                        template: "<div class='customer-photo'" +
+                            "style='background-image: url(https://demos.telerik.com/kendo-ui/content/web/Customers/#:data.CustomerID#.jpg);'></div>" +
+                            "<div class='customer-name'>#: ContactName #</div>",
+                        field: "ContactName",
+                        title: "Contact Name",
+                        width: 240
+                    }, {
+                        field: "ContactTitle",
+                        title: "Contact Title"
+                    }, {
+                        field: "CompanyName",
+                        title: "Company Name"
+                    }, {
+                        field: "Country",
+                        width: 150
+                    }, {
+                        command: [{
+                            text: "Inhabilitar"
+                        }],
+                        title: " ",
+                        width: "180px"
+                    }]
+                });
+            });
+        </script>
+    </div>
+
+</body>
+
+</html>
